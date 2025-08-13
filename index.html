@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leadership Assessment - STAR-Shaigan Learning Portal</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Welcome Page -->
+    <div id="welcomePage" class="page active">
+        <div class="background-animation">
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+                <div class="shape shape-4"></div>
+                <div class="shape shape-5"></div>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="welcome-card glassmorphic">
+                <div class="logo-container">
+                    <div class="logo-wrapper">
+                        <img src="/public/star_department_logo.png" alt="STAR Department" class="logo logo-star">
+                        <img src="/public/shaigan_pharma_logo.png" alt="Shaigan Pharma" class="logo logo-shaigan">
+                    </div>
+                </div>
+                
+                <div class="welcome-content">
+                    <h1 class="welcome-title">
+                        <span class="gradient-text">Leadership Assessment</span>
+                        <div class="title-underline"></div>
+                    </h1>
+                    <p class="welcome-subtitle">Discover Your Leadership Style in Pakistan's Pharmaceutical Industry</p>
+                    
+                    <form id="userForm" class="user-form">
+                        <div class="form-group">
+                            <label for="fullName">
+                                <i class="fas fa-user"></i>
+                                Full Name
+                            </label>
+                            <input type="text" id="fullName" name="fullName" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="designation">
+                                <i class="fas fa-briefcase"></i>
+                                Designation
+                            </label>
+                            <input type="text" id="designation" name="designation" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="team">
+                                <i class="fas fa-users"></i>
+                                Team
+                            </label>
+                            <input type="text" id="team" name="team" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="city">
+                                <i class="fas fa-map-marker-alt"></i>
+                                City
+                            </label>
+                            <input type="text" id="city" name="city" required>
+                        </div>
+                        
+                        <button type="submit" class="btn-primary">
+                            <span>Begin Assessment</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Assessment Page -->
+    <div id="assessmentPage" class="page">
+        <div class="background-animation">
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="assessment-header">
+                <div class="user-welcome">
+                    <h2>Welcome, <span id="userNameDisplay" class="gradient-text"></span></h2>
+                    <p>Leadership Assessment in Progress</p>
+                </div>
+                <div class="progress-container">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                    <span class="progress-text" id="progressText">1 / 25</span>
+                </div>
+            </div>
+            
+            <div class="assessment-card glassmorphic">
+                <div class="question-container">
+                    <div class="question-number">
+                        Question <span id="questionNumber">1</span> of 25
+                    </div>
+                    <div class="statement-text" id="statementText">
+                        Loading statement...
+                    </div>
+                </div>
+                
+                <div class="options-container">
+                    <button class="option-btn" data-value="5">
+                        <div class="option-content">
+                            <div class="option-icon">
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="option-text">
+                                <strong>Always</strong>
+                                <span>This describes me perfectly</span>
+                            </div>
+                        </div>
+                    </button>
+                    
+                    <button class="option-btn" data-value="4">
+                        <div class="option-content">
+                            <div class="option-icon">
+                                <i class="fas fa-thumbs-up"></i>
+                            </div>
+                            <div class="option-text">
+                                <strong>Often</strong>
+                                <span>This describes me well</span>
+                            </div>
+                        </div>
+                    </button>
+                    
+                    <button class="option-btn" data-value="3">
+                        <div class="option-content">
+                            <div class="option-icon">
+                                <i class="fas fa-balance-scale"></i>
+                            </div>
+                            <div class="option-text">
+                                <strong>Sometimes</strong>
+                                <span>This describes me moderately</span>
+                            </div>
+                        </div>
+                    </button>
+                    
+                    <button class="option-btn" data-value="2">
+                        <div class="option-content">
+                            <div class="option-icon">
+                                <i class="fas fa-minus-circle"></i>
+                            </div>
+                            <div class="option-text">
+                                <strong>Rarely</strong>
+                                <span>This rarely describes me</span>
+                            </div>
+                        </div>
+                    </button>
+                    
+                    <button class="option-btn" data-value="1">
+                        <div class="option-content">
+                            <div class="option-icon">
+                                <i class="fas fa-times-circle"></i>
+                            </div>
+                            <div class="option-text">
+                                <strong>Never</strong>
+                                <span>This doesn't describe me at all</span>
+                            </div>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Results Page -->
+    <div id="resultsPage" class="page">
+        <div class="background-animation">
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="results-header">
+                <h2>Assessment Complete, <span id="userNameResults" class="gradient-text"></span>!</h2>
+                <p>Your Leadership Style Analysis</p>
+            </div>
+            
+            <div class="results-content">
+                <div class="primary-style-card glassmorphic">
+                    <div class="primary-style-header">
+                        <h3>Your Primary Leadership Style</h3>
+                        <div class="primary-style-name" id="primaryStyleName">Authoritative</div>
+                        <div class="primary-style-percentage" id="primaryStylePercentage">85%</div>
+                    </div>
+                    <div class="primary-style-description" id="primaryStyleDescription">
+                        You inspire and motivate others with a clear vision of the future.
+                    </div>
+                </div>
+                
+                <div class="all-styles-card glassmorphic">
+                    <h3>Complete Leadership Profile</h3>
+                    <div class="styles-grid" id="stylesGrid">
+                        <!-- Styles will be populated by JavaScript -->
+                    </div>
+                </div>
+                
+                <div class="certificate-section">
+                    <div class="certificate glassmorphic" id="certificate">
+                        <div class="certificate-header">
+                            <div class="certificate-logos">
+                                <img src="/public/star_department_logo.png" alt="STAR Department" class="cert-logo">
+                                <img src="/public/shaigan_pharma_logo.png" alt="Shaigan Pharma" class="cert-logo">
+                            </div>
+                            <h2 class="certificate-title">Leadership Assessment Certificate</h2>
+                        </div>
+                        
+                        <div class="certificate-content">
+                            <p class="certificate-text">This is to certify that</p>
+                            <h3 class="certificate-name" id="certificateName">John Doe</h3>
+                            <p class="certificate-text">has successfully completed the Leadership Assessment</p>
+                            <p class="certificate-text">and demonstrated proficiency in</p>
+                            <h4 class="certificate-style" id="certificateStyle">Authoritative Leadership</h4>
+                            <p class="certificate-score">Score: <span id="certificateScore">85%</span></p>
+                        </div>
+                        
+                        <div class="certificate-footer">
+                            <div class="certificate-signature">
+                                <div class="signature-line"></div>
+                                <p>Zubair Ahmad</p>
+                                <p>Senior SFE Manager</p>
+                            </div>
+                            <div class="certificate-date">
+                                <p id="certificateDate">January 2025</p>
+                            </div>
+                        </div>
+                        
+                        <div class="certificate-bottom">
+                            <p>Certificate is presented from STAR-Shaigan Learning Portal</p>
+                        </div>
+                    </div>
+                    
+                    <div class="certificate-actions">
+                        <button class="btn-secondary" onclick="printCertificate()">
+                            <i class="fas fa-print"></i>
+                            Print Certificate
+                        </button>
+                        <button class="btn-primary" onclick="restartAssessment()">
+                            <i class="fas fa-redo"></i>
+                            Take Assessment Again
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="statements.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
